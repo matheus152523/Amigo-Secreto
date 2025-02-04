@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo Secreto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <h1>Amigo Secreto</h1>
+            
+            <div class="steps">
+                <div class="step active" id="step1">
+                    <h2>1. Adicione os Participantes</h2>
+                    <form id="participant-form" class="participant-form">
+                        <div class="input-group">
+                            <input 
+                                type="text" 
+                                id="participant-name" 
+                                placeholder="Nome do participante"
+                                autocomplete="off"
+                            >
+                            <button type="submit" class="btn-add">
+                                <span class="plus-icon">+</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="participants-list">
+                        <h3>Participantes</h3>
+                        <ul id="participants"></ul>
+                        <p class="participants-count">Total: <span id="total-participants">0</span></p>
+                    </div>
+
+                    <button id="next-step" class="btn-primary" disabled>
+                        Sortear
+                        <span class="arrow-icon">→</span>
+                    </button>
+                </div>
+
+                <div class="step" id="step2">
+                    <h2>2. Revelar Amigo Secreto</h2>
+                    <div class="reveal-section">
+                        <select id="participant-select" class="participant-select">
+                            <option value="">Selecione seu nome</option>
+                        </select>
+
+                        <div id="result" class="result hidden">
+                            <div class="gift-animation">🎁</div>
+                            <p>Seu amigo secreto é:</p>
+                            <h3 id="secret-friend"></h3>
+                        </div>
+
+                        <button id="reveal-btn" class="btn-primary" disabled>
+                            Revelar Amigo Secreto
+                        </button>
+                    </div>
+
+                    <button id="restart-btn" class="btn-secondary">
+                        <span class="restart-icon">↺</span>
+                        Novo Sorteio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
